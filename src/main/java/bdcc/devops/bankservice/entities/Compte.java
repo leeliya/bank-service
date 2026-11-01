@@ -1,12 +1,10 @@
 package bdcc.devops.bankservice.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -22,4 +20,10 @@ public class Compte {
     private String devise;
     @Enumerated(EnumType.STRING)
     private TypeCompte type;
+
+    @PrePersist
+    void prePersist() {
+        if (id == null) id = UUID.randomUUID().toString();
+        if (dateCreation == null) dateCreation = new Date();
+    }
 }
