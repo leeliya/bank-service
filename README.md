@@ -61,6 +61,8 @@ Avec GraphQL le client choisit les attributs qu'il veut recevoir, c'est comme un
 
 ![listComptes](captures/graphql-list.png)
 
+![compteById](captures/graphql-byid.png)
+
 ## 11. Gestion des exceptions
 Quand un compte n'existe pas, `GraphqlExceptionResolver` retourne un message d'erreur lisible (`Compte ... introuvable`) à la place de l'erreur par défaut.
 
@@ -80,6 +82,10 @@ mutation {
 ```
 
 ![addCompte](captures/graphql-add.png)
+
+![updateCompte](captures/graphql-update.png)
+
+![deleteCompte](captures/graphql-delete.png)
 
 ```graphql
 mutation {
