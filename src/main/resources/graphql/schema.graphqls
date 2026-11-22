@@ -1,0 +1,12 @@
+type Query {
+    listComptes: [Compte]
+    compteById(id: String): Compte
+}
+
+type Compte {
+    id: String
+    dateCreation: String
+    solde: Float
+    devise: String
+    type: String
+}
