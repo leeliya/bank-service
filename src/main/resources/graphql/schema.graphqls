@@ -3,6 +3,18 @@ type Query {
     compteById(id: String): Compte
 }
 
+type Mutation {
+    addCompte(compte: CompteInput): Compte
+    updateCompte(id: String, compte: CompteInput): Compte
+    deleteCompte(id: String): Boolean
+}
+
+input CompteInput {
+    solde: Float
+    devise: String
+    type: String
+}
+
 type Compte {
     id: String
     dateCreation: String
