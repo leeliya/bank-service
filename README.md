@@ -59,8 +59,12 @@ query {
 
 Avec GraphQL le client choisit les attributs qu'il veut recevoir, c'est comme une projection.
 
+![listComptes](captures/graphql-list.png)
+
 ## 11. Gestion des exceptions
 Quand un compte n'existe pas, `GraphqlExceptionResolver` retourne un message d'erreur lisible (`Compte ... introuvable`) à la place de l'erreur par défaut.
+
+![erreur compte introuvable](captures/graphql-erreur.png)
 
 ## 12. Mutations
 `addCompte`, `updateCompte` et `deleteCompte` passent par la couche service et le DTO `CompteRequestDTO`.
@@ -74,6 +78,8 @@ mutation {
   }
 }
 ```
+
+![addCompte](captures/graphql-add.png)
 
 ```graphql
 mutation {
@@ -106,6 +112,8 @@ query {
   }
 }
 ```
+
+![clients](captures/graphql-clients.png)
 
 ```graphql
 query {
