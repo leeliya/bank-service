@@ -1,6 +1,7 @@
 type Query {
     listComptes: [Compte]
     compteById(id: String): Compte
+    clients: [Client]
 }
 
 type Mutation {
@@ -21,4 +22,11 @@ type Compte {
     solde: Float
     devise: String
     type: String
+    client: Client
+}
+
+type Client {
+    id: ID
+    nom: String
+    comptes: [Compte]
 }

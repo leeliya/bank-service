@@ -20,6 +20,8 @@ public class Compte {
     private String devise;
     @Enumerated(EnumType.STRING)
     private TypeCompte type;
+    @ManyToOne
+    private Client client;
 
     @PrePersist
     void prePersist() {
